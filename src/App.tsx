@@ -12,12 +12,12 @@ function App() {
     console.log("App rendering")
     return (
         <div className="App">
-            <PageTitle title={"This is App component!"}/>
-            <PageTitle title={"My friends"}/>
-            Article 1
-            <Rating value={3}/>
-            <Accordion titleValue={"Menu"}/>
-            <Accordion titleValue={"Users"}/>
+            {/*<PageTitle title={"This is App component!"}/>*/}
+            {/*<PageTitle title={"My friends"}/>*/}
+            {/*Article 1*/}
+            {/*<Rating value={3}/>*/}
+            {/*<Accordion titleValue={"Menu"}/>*/}
+            {/*<Accordion titleValue={"Users"}/>*/}
             <Rating value={0}/>
             <Rating value={1}/>
             <Rating value={2}/>
