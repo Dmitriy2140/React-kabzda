@@ -1,74 +1,37 @@
 import React from 'react';
 import './App.css';
+import Accordion from "./Components/Accordion/Accordion";
+import {Rating} from "./Components/Rating/Rating";
+
+// function hello() {
+//     alert("Hay!")
+// }
+// hello();
 
 function App() {
     console.log("App rendering")
     return (
         <div className="App">
-            <AppTitle/>
-            <Rating/>
-            <Accordion/>
-            <Rating/>
+            <PageTitle title={"This is App component!"}/>
+            <PageTitle title={"My friends"}/>
+            Article 1
+            <Rating value={3}/>
+            <Accordion titleValue={"Menu"}/>
+            <Accordion titleValue={"Users"}/>
+            <Rating value={0}/>
+            <Rating value={1}/>
+            <Rating value={2}/>
+            <Rating value={3}/>
+            <Rating value={4}/>
+            <Rating value={5}/>
         </div>
     );
 }
 
-function AppTitle() {
-    console.log("AppTitle rendering")
+function PageTitle(props: any) {
+    console.log("PageTitle rendering")
     return (
-        <>This is App component!</>
-    )
-}
-
-function Rating() {
-    console.log("Rating rendering")
-    return (
-        <div>
-            <Star/>
-            <Star/>
-            <Star/>
-            <Star/>
-            <Star/>
-        </div>
-    )
-}
-
-function Star() {
-    console.log("Star rendering")
-    return (
-        <div>
-            star
-        </div>
-    )
-}
-
-function Accordion() {
-    console.log("Accordion rendering")
-    return (
-        <div>
-            <AccordionTitle/>
-            <AccordionButton/>
-        </div>
-    )
-}
-
-function AccordionTitle() {
-    console.log("AccordionTitle rendering")
-    return (
-        <div>
-            <h3>Menu</h3>
-        </div>
-    )
-}
-
-function AccordionButton() {
-    console.log("AccordionButton rendering")
-    return (
-        <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-        </ul>
+        <h1>{props.title}</h1>
     )
 }
 
